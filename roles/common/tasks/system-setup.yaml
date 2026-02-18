@@ -1,6 +1,6 @@
 - name: copy {{ component }} service
   ansible.builtin.template:
-    src: "{{ component }}.service.j2"
+    src: "{{ component }}.service.j2"  #catalogue.service.j2 (templates)
     dest: "/etc/systemd/system/{{ component }}.service"
   notify: daemon reload
 
